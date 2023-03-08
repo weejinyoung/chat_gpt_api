@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/chatgpt?serverTimezone=Asia/Seoul
+    username: root
+    password: "004637"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    defer-datasource-initialization: true
+
+
+logging:
+  level:
+    com.com.backend: DEBUG   # 로깅 레벨 설정
+
+chatgpt:
+  api-key: "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"
