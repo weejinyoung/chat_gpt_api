@@ -17,13 +17,12 @@ import practice.chat_gpt_api.service.ChatGptService;
 @Slf4j
 public class ChatGptController {
 
-    private final ChatGptService chatgptService;
+    private final ChatGptService chatGptService;
 
-    @GetMapping("/talk")
-    public ResponseEntity<String> talkWithChatGpt(@RequestParam(value = "message") String message) {
-        log.info("1. this is user's request message {}", message);
-        String responseMessage = chatgptService.sendMessage(message);
-        log.info("7. this is server's response message {}", message);
+
+    @GetMapping("/chat/chat-gpt")
+    public ResponseEntity<String> chatWithChatGpt(@RequestParam(value = "message") String message) {
+        String responseMessage = chatGptService.chatWithChatGpt(message);
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 

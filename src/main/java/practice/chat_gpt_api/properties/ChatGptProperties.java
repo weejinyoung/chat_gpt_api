@@ -15,7 +15,7 @@ public class ChatGptProperties {
 
     //apiKey
     private String apiKey = "";
-    private String model = "text-davinci-003";
+    private String model = "gpt-3.5-turbo";
     private Integer maxTokens = 300;
     private Double temperature = 0.0;
     private Double topP = 1.0;

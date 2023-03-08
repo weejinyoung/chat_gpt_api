@@ -21,3 +21,4 @@ logging:
 
 chatgpt:
   api-key: "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"
+  url: "https://api.openai.com/v1/completions"
